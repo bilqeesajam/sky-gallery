@@ -1,0 +1,76 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%; /* Prevent overflow */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%; /* Ensure image doesn't exceed container */
+}
+
+/* Hero Title Styling */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-title {
+    color: #FFF2E0;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow:
+        0 0 5px #FFF2E0,
+        0 0 10px #FFF2E0;
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 5px;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; /* Double down on mobile */
+    }
+    
+    .hero img {
+        width: 100%;
+        max-width: none; /* Allow cover to work properly */
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+}
+
+/* All devices - ensure no horizontal scroll */
+.hero,
+.hero img {
+    box-sizing: border-box;
+}

@@ -1,0 +1,84 @@
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.filter-bar button {
+  background-color: rgba(128, 128, 128, 0.3); /* Translucent grey */
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #C0C9EE;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: fit-content;
+  flex-shrink: 0;
+  font-family: lato;
+}
+
+.filter-bar button:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  transform: translateY(-2px);
+}
+
+.filter-bar button.active {
+  background-color: rgba(128, 128, 128, 0.7);
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filter-bar {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .filter-bar button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar {
+    gap: 0.375rem;
+    padding: 0.5rem;
+  }
+  
+  .filter-bar button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .filter-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+  }
+  
+  .filter-bar button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  /* Hide scrollbar for cleaner look */
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .filter-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

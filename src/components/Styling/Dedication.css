@@ -1,0 +1,21 @@
+.dedication {
+    background-color: #2d2d4c;
+    text-align: center;
+}
+
+.dedication-title {
+    font-size: 2rem;
+    color: #FFF2E0;
+    font-weight: 500;
+    font-family: lato;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.letter {
+    color: #C0C9EE;
+    font-size: 1.5rem;
+    font-family: lato;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
