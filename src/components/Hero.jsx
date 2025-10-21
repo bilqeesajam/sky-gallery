@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <img 
-        src="/assets/hero/SKY_20250530_201734.jpg" 
+        src="/assets/images/SKY_20250915_220433.jpg" 
         alt="Sky view landscape" 
         loading="lazy"
       />
