@@ -37,14 +37,6 @@ export default function Navbar() {
             Gallery
           </a>
         </li>
-        <li>
-          <a 
-            href="#dedication" 
-            onClick={(e) => handleSmoothScroll(e, 'dedication')}
-          >
-            Dedication
-          </a>
-        </li>
       </ul>
       
       {/* Mobile Menu Button */}
@@ -61,14 +53,6 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
         <ul className="mobile-links">
-          <li>
-            <a 
-              href="#dedication" 
-              onClick={(e) => handleSmoothScroll(e, 'dedication')}
-            >
-              Dedication
-            </a>
-          </li>
           <li>
             <a 
               href="#video" 
