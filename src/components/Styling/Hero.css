@@ -17,6 +17,19 @@
     max-width: 100%; /* Ensure image doesn't exceed container */
 }
 
+/* Hero Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through to content below */
+}
+
 /* Hero Title Styling */
 .hero-content {
     position: absolute;
@@ -29,12 +42,9 @@
 }
 
 .hero-title {
-    color: #2d4c39;
+    color: #DDFFBC;
     font-size: 4rem;
     font-weight: bold;
-    text-shadow:
-        0 0 5px #FFF2E0,
-        0 0 10px #FFF2E0;
     margin: 0;
     padding: 0 20px;
     font-family: 'Dancing Script', cursive;

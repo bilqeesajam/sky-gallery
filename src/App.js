@@ -1,6 +1,6 @@
 import FeaturedVideo from './components/FeaturedVideo';
 import Hero from './components/Hero';
-import Dedication from './components/Dedication';
+// import Dedication from './components/Dedication';
 import Gallery from './components/Gallery';
 import Navbar from './components/Navbar';
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Dedication />
+      {/* <Dedication /> */}
       <FeaturedVideo />
       <Gallery />
     </>

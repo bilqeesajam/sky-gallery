@@ -24,9 +24,9 @@ export default function Gallery() {
     e.stopPropagation();
     if (selectedImage) {
       const nextIndex = (selectedImage.index + 1) % filteredImages.length;
-      setSelectedImage({ 
-        src: `/assets/images/${filteredImages[nextIndex].image}`, 
-        index: nextIndex 
+      setSelectedImage({
+        src: `/assets/images/${filteredImages[nextIndex].image}`,
+        index: nextIndex
       });
     }
   };
@@ -35,9 +35,9 @@ export default function Gallery() {
     e.stopPropagation();
     if (selectedImage) {
       const prevIndex = (selectedImage.index - 1 + filteredImages.length) % filteredImages.length;
-      setSelectedImage({ 
-        src: `/assets/images/${filteredImages[prevIndex].image}`, 
-        index: prevIndex 
+      setSelectedImage({
+        src: `/assets/images/${filteredImages[prevIndex].image}`,
+        index: prevIndex
       });
     }
   };
@@ -47,7 +47,7 @@ export default function Gallery() {
     const handleEscape = (e) => {
       if (e.key === 'Escape') closeLightbox();
     };
-    
+
     if (selectedImage) {
       document.addEventListener('keydown', handleEscape);
       return () => document.removeEventListener('keydown', handleEscape);
@@ -81,7 +81,7 @@ export default function Gallery() {
       {/* Lightbox Overlay */}
       {selectedImage && (
         <div className="lightbox-overlay" onClick={closeLightbox}>
-          <div className="lightbox-content">
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox-close" onClick={closeLightbox}>
               &times;
             </button>
@@ -101,6 +101,7 @@ export default function Gallery() {
           </div>
         </div>
       )}
+
     </>
   );
 }
