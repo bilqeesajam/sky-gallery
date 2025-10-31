@@ -62,21 +62,21 @@
 /* For very small screens */
 @media (max-width: 360px) {
   .filter-bar {
-    justify-content: flex-start;
+    justify-content: center; /* keep centered */
     overflow-x: auto;
     padding-bottom: 0.75rem;
   }
-  
+
   .filter-bar button {
     flex-shrink: 0;
     white-space: nowrap;
   }
-  
+
   /* Hide scrollbar for cleaner look */
   .filter-bar::-webkit-scrollbar {
     display: none;
   }
-  
+
   .filter-bar {
     -ms-overflow-style: none;
     scrollbar-width: none;
