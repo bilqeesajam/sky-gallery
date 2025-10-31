@@ -1,7 +1,7 @@
 import './Styling/FilterBar.css';
 
 export default function FilterBar({ selected, onSelect }) {
-  const filters = ['all', 'misc', 'bilqees', 'sal', 'ari', 'yaya'];
+  const filters = ['all', 'misc', 'taker', 'sal', 'ari', 'yaya'];
 
   return (
     <div className="filter-bar">
